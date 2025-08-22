@@ -641,7 +641,7 @@
     });
   </script>
 
-  <script type="application/ld+json">{
+<script type="application/ld+json">{
 "@context": "https://schema.org",
 "@type": "Person",
 "name": "Maria Zahid",
@@ -658,44 +658,33 @@
 "knowsAbout":["ASP.NET Core","Angular","SQL Server","Power BI","Microservices","WooCommerce"],
 "worksFor": {"@type":"Organization","name":"Independent Contractor"}
 }</script>
-  <script>
-// Override demo video buttons with project-related sources (capture phase)
+<script>
+// Override demo video buttons with project-related sources using YouTube links
 (function(){
 const modal = document.getElementById('modal');
 const modalVideo = document.getElementById('modalVideo');
 const videoMap = {
-'med360': 'assets/videos/med360-demo.mp4',
-'edu-bi': 'assets/videos/education-insights-demo.mp4',
-'smartschool': 'assets/videos/smartschool-erp-demo.mp4',
-'erp': 'assets/videos/enterprise-erp-demo.mp4',
-'aims': 'assets/videos/aims-schools-demo.mp4',
-'files': 'assets/videos/secure-file-mgmt-demo.mp4',
-'hotel': 'assets/videos/hotel-mgmt-demo.mp4',
-'wp': 'assets/videos/woocommerce-storefront-demo.mp4',
-'inv': 'assets/videos/buying-sales-inventory-demo.mp4',
-'inv-pro': 'assets/videos/inventory-pro-ml-demo.mp4',
-'cicd': 'assets/videos/cicd-automation-demo.mp4'
+'med360': 'https://www.youtube.com/embed/XXXXXXXXXXX',
+'edu-bi': 'https://www.youtube.com/embed/YYYYYYYYYYY',
+'smartschool': 'https://www.youtube.com/embed/ZZZZZZZZZZZ',
+'erp': 'https://www.youtube.com/embed/AAAAAAAAAAA',
+'aims': 'https://www.youtube.com/embed/BBBBBBBBBBB',
+'files': 'https://www.youtube.com/embed/CCCCCCCCCCC',
+'hotel': 'https://www.youtube.com/embed/DDDDDDDDDDD',
+'wp': 'https://www.youtube.com/embed/EEEEEEEEEEE',
+'inv': 'https://www.youtube.com/embed/FFFFFFFFFFF',
+'inv-pro': 'https://www.youtube.com/embed/GGGGGGGGGGG',
+'cicd': 'https://www.youtube.com/embed/HHHHHHHHHHH'
 };
 
 
 document.addEventListener('click', function(e){
 const btn = e.target.closest('[data-video]');
 if(!btn) return;
-// prevent existing handlers from running
 e.preventDefault(); e.stopPropagation();
-const article = btn.closest('.project');
-const caseLink = article ? article.querySelector('[data-case]') : null;
-const key = caseLink ? caseLink.getAttribute('data-case') : null;
-const src = (key && videoMap[key]) ? videoMap[key] : btn.getAttribute('data-video');
-if(!modal || !modalVideo) return;
-modal.classList.add('open');
-modal.setAttribute('aria-hidden','false');
-modalVideo.src = src || '';
-try{ modalVideo.play(); }catch(_){ /* ignore autoplay restrictions */ }
-}, true);
-})();
 </script>
 </body>
 </html>
+
 
 
