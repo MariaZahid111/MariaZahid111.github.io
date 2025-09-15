@@ -117,8 +117,42 @@
 
     footer { padding:32px 0 48px; color:var(--muted); text-align:center; }
 
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      border-radius: 50px;
+      padding: 12px 20px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); }
+      50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6); }
+      100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); }
+    }
+
     /* Responsive */
-    @media (max-width: 900px){ .hero{ grid-template-columns: 1fr; } .t{ grid-template-columns: 1fr; } .contact{ grid-template-columns: 1fr; } }
+    @media (max-width: 900px){ 
+      .hero{ grid-template-columns: 1fr; } 
+      .t{ grid-template-columns: 1fr; } 
+      .contact{ grid-template-columns: 1fr; }
+      .whatsapp-float { bottom: 15px; right: 15px; padding: 10px 16px; font-size: 14px; }
+    }
   </style>
 </head>
 <body>
@@ -151,7 +185,7 @@
         </p>
         <div class="hero-cta">
           <a class="btn" href="#projects"><i class="fa-solid fa-rocket"></i> Explore Projects</a>
-          <a class="btn ghost" href="resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+          <a class="btn" href="https://wa.me/923428511599?text=Hi%20Maria,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" style="background: linear-gradient(135deg, #25D366, #128C7E);"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</a>
         </div>
         <div class="hero-card" role="note" aria-label="Key highlight">
           <i class="fa-solid fa-circle-check"></i>
@@ -250,7 +284,7 @@
         <!-- 1 Med360 -->
         <article class="project" data-tags="dotnet,healthcare" data-filter="dotnet">
           <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1576765607924-b0b31e6b5b14?q=80&w=1320&auto=format&fit=crop" alt="Med360 Hospital Information System dashboard" />
+            <img src="design_1.png" alt="Med360 Hospital Information System dashboard" />
           </div>
           <div class="body">
             <h3>Med360 — Hospital Information System</h3>
@@ -259,7 +293,6 @@
               <span class="tag">ASP.NET MVC</span><span class="tag blue">SQL Server</span><span class="tag green">jQuery</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"><i class="fa-solid fa-circle-play"></i> Demo Video</button>
               <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
@@ -268,7 +301,7 @@
         <!-- 2 Educational Insights (Power BI) -->
         <article class="project" data-tags="powerbi,education" data-filter="powerbi">
           <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1320&auto=format&fit=crop" alt="Power BI dashboard for education analytics" />
+            <img src="design_3.png" alt="Power BI dashboard for education analytics" />
           </div>
           <div class="body">
             <h3>Educational Insights Dashboard</h3>
@@ -277,8 +310,9 @@
               <span class="tag">Power BI</span><span class="tag blue">DAX</span><span class="tag green">.NET API</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="edu-bi">Case Study</a>
+              <button class="btn small ghost" data-gallery="powerbi"><i class="fa-regular fa-images"></i> Gallery</button>
+              <button class="btn small ghost" data-video="powerbi"><i class="fa-solid fa-circle-play"></i> Demo Video</button>
+              <a class="btn small" href="#" aria-label="Case study" data-case="edu-bi"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -286,7 +320,7 @@
         <!-- 3 SmartSchool ERP -->
         <article class="project" data-tags="dotnet,education" data-filter="dotnet angular">
           <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1320&auto=format&fit=crop" alt="SmartSchool ERP interface" />
+            <img src="design_5.png" alt="SmartSchool ERP interface" />
           </div>
           <div class="body">
             <h3>SmartSchool ERP</h3>
@@ -295,8 +329,7 @@
               <span class="tag">.NET 6</span><span class="tag blue">Blazor</span><span class="tag green">Azure</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="smartschool">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -304,7 +337,7 @@
         <!-- 4 Enterprise ERP -->
         <article class="project" data-tags="dotnet,erp" data-filter="dotnet angular">
           <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1320&auto=format&fit=crop" alt="Enterprise ERP analytics screen" />
+            <img src="A_presentation_image_showcases_an_Enterprise_Web_A.jpg" alt="Enterprise ERP analytics screen" />
           </div>
           <div class="body">
             <h3>Enterprise ERP Platform</h3>
@@ -313,8 +346,7 @@
               <span class="tag">Angular 12+</span><span class="tag blue">.NET 6</span><span class="tag green">EF Core</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="erp">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -331,8 +363,7 @@
               <span class="tag">C#</span><span class="tag blue">Web API</span><span class="tag green">SQL Server</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="aims">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -349,8 +380,7 @@
               <span class="tag">.NET Core</span><span class="tag blue">EF Core</span><span class="tag green">jQuery</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="files">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -367,8 +397,7 @@
               <span class="tag">ASP.NET MVC</span><span class="tag blue">Bootstrap</span><span class="tag green">SQL Server</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="hotel">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -385,8 +414,7 @@
               <span class="tag">WordPress</span><span class="tag blue">WooCommerce</span><span class="tag green">PHP/MySQL</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="wp">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -394,7 +422,7 @@
         <!-- 9 Buying/Sale Inventory -->
         <article class="project" data-tags="dotnet,inventory" data-filter="dotnet angular">
           <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?q=80&w=1320&auto=format&fit=crop" alt="Inventory management with barcode scanning" />
+            <img src="BuySell ER Diagram.png" alt="Inventory management with barcode scanning" />
           </div>
           <div class="body">
             <h3>Buying & Sales Inventory</h3>
@@ -403,8 +431,7 @@
               <span class="tag">.NET Core</span><span class="tag blue">Angular</span><span class="tag green">REST API</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="inv">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -412,7 +439,7 @@
         <!-- 10 Inventory Pro (AI) -->
         <article class="project" data-tags="dotnet,ai" data-filter="dotnet">
           <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1320&auto=format&fit=crop" alt="AI‑powered inventory optimization charts" />
+            <img src="aspnet_csharp_bug_fix_gig_image.png" alt="AI‑powered inventory optimization charts" />
           </div>
           <div class="body">
             <h3>Inventory Pro — Predictive Reordering</h3>
@@ -421,8 +448,7 @@
               <span class="tag">C#</span><span class="tag blue">ML.NET</span><span class="tag green">React</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="inv-pro">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -439,8 +465,7 @@
               <span class="tag">Azure DevOps</span><span class="tag blue">GitHub Actions</span><span class="tag green">Docker</span>
             </div>
             <div class="actions">
-              <button class="btn small ghost" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Demo Video</button>
-              <a class="btn small" href="#" data-case="cicd">Case Study</a>
+              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
             </div>
           </div>
         </article>
@@ -448,29 +473,30 @@
     </section>
 
     <!-- Contact -->
-  <section class="container" id="contact">
-<div class="section-head">
-<h2>Contact</h2>
-<p class="muted">Let’s build something reliable and scalable.</p>
-</div>
-<div class="contact">
-<div class="card">
-<h3 style="margin:0 0 8px">Reach me</h3>
-<div><i class="fa-solid fa-envelope"></i> <a class="link" href="mailto:zahidmaria786@gmail.com">zahidmaria786@gmail.com</a></div>
-<div><i class="fa-solid fa-phone"></i> <a class="link" href="tel:+923428511599">+92 342 8511599</a></div>
-<div><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan (UTC+5)</div>
-</div>
-<div class="card">
-<h3 style="margin:0 0 8px">Social</h3>
-<div style="display:flex; gap:10px; flex-wrap:wrap">
-<a class="btn small ghost" href="https://www.linkedin.com/in/maria-zahid-236190191/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-<a class="btn small ghost" href="https://github.com/MariaZahid111/MariaZahidPotfolio" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-<a class="btn small ghost" href="https://www.upwork.com/freelancers/~01a7d74dcc49a085a4?viewMode=1" target="_blank" rel="noopener" aria-label="Upwork"><i class="fa-brands fa-upwork"></i> Upwork</a>
-<a class="btn small ghost" href="https://www.fiverr.com/mariazahid7576/buying?source=avatar_menu_profile" target="_blank" rel="noopener" aria-label="Fiverr"><i class="fa-brands fa-fiverr"></i> Fiverr</a>
-</div>
-</div>
-</div>
-</section>
+    <section class="container" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Let’s build something reliable and scalable.</p>
+      </div>
+      <div class="contact">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Reach me</h3>
+          <div><i class="fa-solid fa-envelope"></i> <a class="link" href="mailto:zahidmaria786@gmail.com">zahidmaria786@gmail.com</a></div>
+          <div><i class="fa-solid fa-phone"></i> <a class="link" href="tel:+923428511599">+92 342 8511599</a></div>
+          <div><i class="fa-brands fa-whatsapp"></i> <a class="link" href="https://wa.me/923428511599?text=Hi%20Maria,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank">WhatsApp Chat</a></div>
+          <div><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan (UTC+5)</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">Social</h3>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn small ghost" href="https://linkedin.com/in/maria-zahid-dev" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a class="btn small ghost" href="https://github.com/mariazahid" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a class="btn small ghost" href="https://twitter.com/mariazahid_dev" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i> X</a>
+            <a class="btn small ghost" href="https://stackoverflow.com/users/maria-zahid" target="_blank" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i> Stack Overflow</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -479,16 +505,15 @@
     </div>
   </footer>
 
-  <!-- Video Modal -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project demo video">
-    <div class="content">
-      <div class="bar">
-        <strong>Project Demo</strong>
-        <button class="close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <video id="modalVideo" controls playsinline></video>
-    </div>
-  </div>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923428511599?text=Hi%20Maria,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" class="whatsapp-float" aria-label="Contact via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Chat Now</span>
+  </a>
+
+  <!-- Video Modal removed - no demo videos available -->
+
+  <!-- Gallery Modal removed -->
 
   <!-- Case Study Modal (re-uses same container for content) -->
   <div class="modal" id="caseModal" aria-hidden="true" role="dialog" aria-label="Project case study">
@@ -522,14 +547,9 @@
       });
     }));
 
-    // Video modal
-    const modal=document.getElementById('modal');
-    const modalVideo=document.getElementById('modalVideo');
-    document.querySelectorAll('[data-video]').forEach(btn=>{
-      btn.addEventListener('click',()=>{ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); modalVideo.src=btn.dataset.video; modalVideo.play(); });
-    });
-    modal.querySelector('.close').addEventListener('click',()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); modalVideo.pause(); modalVideo.src=''; });
-    modal.addEventListener('click',e=>{ if(e.target===modal){ modal.classList.remove('open'); modalVideo.pause(); modalVideo.src=''; }});
+    // Video modal removed - no demo videos available
+
+    // Gallery functionality removed
 
     // Case study modal content
     const cases={
@@ -641,50 +661,16 @@
     });
   </script>
 
-<script type="application/ld+json">{
-"@context": "https://schema.org",
-"@type": "Person",
-"name": "Maria Zahid",
-"jobTitle": "Senior Full-Stack .NET Developer",
-"address": {"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},
-"email": "mailto:zahidmaria786@gmail.com",
-"url": "https://www.linkedin.com/in/maria-zahid-236190191/",
-"sameAs":[
-"https://www.linkedin.com/in/maria-zahid-236190191/",
-"https://github.com/MariaZahid111/MariaZahidPotfolio",
-"https://www.upwork.com/freelancers/~01a7d74dcc49a085a4?viewMode=1",
-"https://www.fiverr.com/mariazahid7576/buying?source=avatar_menu_profile"
-],
-"knowsAbout":["ASP.NET Core","Angular","SQL Server","Power BI","Microservices","WooCommerce"],
-"worksFor": {"@type":"Organization","name":"Independent Contractor"}
-}</script>
-<script>
-// Override demo video buttons with project-related sources using YouTube links
-(function(){
-const modal = document.getElementById('modal');
-const modalVideo = document.getElementById('modalVideo');
-const videoMap = {
-'med360': 'https://www.youtube.com/embed/XXXXXXXXXXX',
-'edu-bi': 'https://www.youtube.com/embed/YYYYYYYYYYY',
-'smartschool': 'https://www.youtube.com/embed/ZZZZZZZZZZZ',
-'erp': 'https://www.youtube.com/embed/AAAAAAAAAAA',
-'aims': 'https://www.youtube.com/embed/BBBBBBBBBBB',
-'files': 'https://www.youtube.com/embed/CCCCCCCCCCC',
-'hotel': 'https://www.youtube.com/embed/DDDDDDDDDDD',
-'wp': 'https://www.youtube.com/embed/EEEEEEEEEEE',
-'inv': 'https://www.youtube.com/embed/FFFFFFFFFFF',
-'inv-pro': 'https://www.youtube.com/embed/GGGGGGGGGGG',
-'cicd': 'https://www.youtube.com/embed/HHHHHHHHHHH'
-};
-
-
-document.addEventListener('click', function(e){
-const btn = e.target.closest('[data-video]');
-if(!btn) return;
-e.preventDefault(); e.stopPropagation();
-</script>
-</body>
-</html>
-
-
-
+  <!-- Structured data -->
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maria Zahid",
+    "jobTitle": "Senior Full‑Stack .NET Developer",
+    "address": {"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},
+    "email": "mailto:zahidmaria786@gmail.com",
+    "url": "",
+    "sameAs":["https://linkedin.com/in/maria-zahid-dev","https://github.com/mariazahid","https://twitter.com/mariazahid_dev","https://stackoverflow.com/users/maria-zahid"],
+    "knowsAbout":["ASP.NET Core","Angular","SQL Server","Power BI","Microservices","WooCommerce"],
+    "worksFor": {"@type":"Organization","name":"Independent Contractor"}
+  }</script>
