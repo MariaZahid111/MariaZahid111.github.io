@@ -3,173 +3,154 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maria Zahid — Senior .NET Full‑Stack Developer</title>
-  <meta name="description" content="Senior Full‑Stack .NET Developer specializing in ASP.NET Core, Angular, SQL Server, and Power BI. Remote work specialist delivering enterprise apps, ERPs, and analytics." />
-  <meta property="og:title" content="Maria Zahid — Senior .NET Full‑Stack Developer" />
-  <meta property="og:description" content="Enterprise .NET, Angular, SQL Server, and Power BI solutions. Remote work specialist." />
+  <title>Codirian Solutions — Software, AI, Mobile & Data Engineering</title>
+  <meta name="description" content="Codirian Solutions delivers product-grade .NET, MERN, Mobile, and AI solutions with secure APIs, dashboards, and automation. Clear scope, weekly demos, on-time launches." />
+  <meta property="og:title" content="Codirian Solutions — Software, AI, Mobile & Data Engineering" />
+  <meta property="og:description" content="Modern .NET, MERN, Mobile, and AI development with analytics and DevOps." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" type="image/png" href="codirian-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-58o3Gv4iE+oDkG3Cw2k4y8YJr3m0tE0b3U7t2oI6l2g7x3T4y6z7ZbqK3n6vJHh1l1k1d0Z7QmV7f8m3n2l5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <style>
-    :root {
-      --bg: #0b1020;          /* page background (dark) */
-      --panel: #0f172a;       /* cards/nav */
-      --text: #e5e7eb;        /* primary text */
-      --muted: #94a3b8;       /* secondary text */
-      --brand: #7c3aed;       /* violet */
-      --brand-2: #22d3ee;     /* cyan */
-      --accent: #10b981;      /* emerald */
-      --ring: rgba(124,58,237,.35);
-      --shadow: 0 10px 30px rgba(2,8,23,.35);
-    }
-    :root.light {
-      --bg: #f7f8fb;
-      --panel: #ffffff;
-      --text: #0b1020;
-      --muted: #475569;
-      --ring: rgba(124,58,237,.22);
-      --shadow: 0 12px 26px rgba(2,8,23,.08);
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text); background: radial-gradient(1200px 1200px at 10% -10%, rgba(124,58,237,.15), transparent 60%),
-              radial-gradient(1000px 900px at 110% -20%, rgba(34,211,238,.15), transparent 60%), var(--bg);
-      line-height: 1.6;
+  <style>
+    :root{
+      --bg:#f5f8ff;            /* light background */
+      --panel:#ffffff;         /* cards/nav */
+      --text:#0f172a;          /* text */
+      --muted:#475569;         /* secondary text */
+      --brand:#0ea5e9;         /* sky blue */
+      --brand-2:#14b8a6;       /* teal */
+      --accent:#6366f1;        /* indigo */
+      --ring: rgba(20,184,166,.18);
+      --shadow: 0 10px 30px rgba(15,23,42,.08);
+      --line: rgba(15,23,42,.08);
+      --grad: radial-gradient(900px 500px at 10% -10%, rgba(14,165,233,.18), transparent 60%),
+              radial-gradient(900px 500px at 110% -10%, rgba(20,184,166,.18), transparent 60%);
     }
-    a { color: inherit; text-decoration: none; }
-    img { display:block; max-width:100%; height:auto; }
-    .container { width: min(1200px, 92%); margin: 0 auto; }
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial;
+      color: var(--text);
+      background: var(--grad), var(--bg);
+      line-height:1.6;
+    }
+    a{ color: inherit; text-decoration: none; }
+    img{ display:block; max-width:100%; height:auto; border-radius:14px; }
+    .container{ width:min(1200px,92%); margin:0 auto; }
 
     /* Nav */
-    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: color-mix(in srgb, var(--panel) 82%, transparent); border-bottom: 1px solid rgba(148,163,184,.15); }
-    .nav { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
-    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; }
-    .brand .dot { width:10px; height:10px; border-radius:9999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow:0 0 0 3px var(--ring); }
-    .nav ul { display:flex; gap:20px; list-style:none; }
-    .nav a { padding:8px 12px; border-radius:10px; color: var(--muted); font-weight:600; }
-    .nav a:hover { color: var(--text); background: rgba(124,58,237,.12); }
-    .nav .right { display:flex; align-items:center; gap:10px; }
-    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:white; font-weight:700; box-shadow: var(--shadow); border:0; cursor:pointer; }
-    .ghost { background: transparent; border:1px solid rgba(148,163,184,.25); color: var(--text); font-weight:600; }
+    header{ position: sticky; top:0; z-index: 50; backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--panel) 70%, transparent);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+    .brand{ display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; }
+    .logo-img{ height:28px; width:auto; border-radius:6px; box-shadow:none; }
+    nav ul{ display:flex; gap:18px; list-style:none; padding:0; margin:0; }
+    nav a{ padding:8px 12px; border-radius:10px; color:var(--muted); font-weight:600; }
+    nav a:hover{ color:var(--text); background: rgba(14,165,233,.12); }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; background: linear-gradient(135deg,var(--brand),var(--brand-2)); color:white; font-weight:700; border:0; cursor:pointer; box-shadow: var(--shadow); }
+    .ghost{ background:transparent; color:var(--text); border:1px solid var(--line); }
 
     /* Hero */
-    .hero { padding: clamp(64px, 8vw, 120px) 0 48px; display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:center; }
-    .hero h1 { font-size: clamp(28px, 4.4vw, 56px); line-height:1.06; margin:0 0 14px; letter-spacing:-.02em; }
-    .hero p { color: var(--muted); font-size: clamp(14px, 1.6vw, 18px); }
-    .hero-cta { margin-top: 24px; display:flex; gap:12px; flex-wrap:wrap; }
-    .hero-card { background: var(--panel); border:1px solid rgba(148,163,184,.15); border-radius:20px; padding:18px; display:flex; gap:14px; align-items:center; margin-top:22px; }
-    .hero-card i { color: var(--brand-2); }
+    .hero{ padding: clamp(64px, 8vw, 120px) 0 48px; display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:center; }
+    .hero h1{ font-size: clamp(28px, 4.4vw, 56px); line-height:1.06; margin:0 0 12px; letter-spacing:-.02em; }
+    .hero p{ color: var(--muted); font-size: clamp(14px, 1.5vw, 18px); }
+    .hero-cta{ margin-top:22px; display:flex; gap:12px; flex-wrap:wrap; }
+    .trust{ display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:18px; }
+    .trust .chip{ background: #f0f7ff; color:#0b3b66; border:1px dashed #cde3ff; padding:8px 10px; border-radius:12px; font-weight:700; font-size:14px; }
 
-    /* Section */
-    section { padding: 72px 0; }
-    .section-head { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; }
-    .section-head h2 { font-size: clamp(22px, 2.6vw, 34px); margin:0; }
-    .muted { color: var(--muted); }
+    .card{ background: var(--panel); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow: var(--shadow); }
 
-    /* Skills */
-    .skills { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; }
-    .chip { background: color-mix(in srgb, var(--panel), black 6%); border:1px solid rgba(148,163,184,.15); padding:10px 12px; border-radius:12px; display:flex; align-items:center; gap:10px; font-weight:600; }
+    /* Sections */
+    section{ padding: 72px 0; }
+    .section-head{ display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:24px; }
+    .section-head h2{ font-size: clamp(22px,2.6vw,34px); margin:0; }
+    .muted{ color: var(--muted); }
 
-    /* Timeline */
-    .timeline { display:grid; gap:18px; }
-    .t { display:grid; grid-template-columns: 140px 1fr; gap:18px; align-items:start; }
-    .t .date { color: var(--muted); font-weight:700; }
-    .card { background: var(--panel); border:1px solid rgba(148,163,184,.15); border-radius:16px; padding:16px; box-shadow: var(--shadow); }
+    /* Grids */
+    .grid-3{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+    .grid-4{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; }
+    .service i{ font-size:20px; color: var(--brand); }
 
-    /* Filters */
-    .filters { display:flex; flex-wrap:wrap; gap:8px; }
-    .filter { padding:8px 12px; border:1px solid rgba(148,163,184,.25); background:transparent; color:var(--muted); border-radius:999px; font-weight:700; cursor:pointer; }
-    .filter.active { background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:white; border-color:transparent; }
+    /* Filters + Projects */
+    .filters{ display:flex; flex-wrap:wrap; gap:8px; }
+    .filter{ padding:8px 12px; border:1px solid var(--line); background:transparent; color:var(--muted); border-radius:999px; font-weight:700; cursor:pointer; }
+    .filter.active{ background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:white; border-color:transparent; }
+    .projects{ display:grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap:18px; }
+    .project{ overflow:hidden; border-radius:16px; background: var(--panel); border:1px solid var(--line); display:flex; flex-direction:column; }
+    .thumb{ aspect-ratio: 16/9; overflow:hidden; }
+    .thumb img{ width:100%; height:100%; object-fit:cover; transition: transform .6s ease; }
+    .project:hover .thumb img{ transform: scale(1.06); }
+    .project .body{ padding:14px 14px 16px; display:grid; gap:8px; }
+    .tags{ display:flex; gap:8px; flex-wrap:wrap; }
+    .tag{ font-size:12px; padding:6px 8px; border-radius:999px; background: rgba(14,165,233,.15); color:#075985; }
+    .tag.t{ background: rgba(20,184,166,.15); color:#065f46; }
+    .tag.p{ background: rgba(99,102,241,.15); color:#3730a3; }
 
-    /* Projects grid */
-    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap:18px; }
-    .project { position:relative; overflow:hidden; border-radius:16px; background: var(--panel); border:1px solid rgba(148,163,184,.15); display:flex; flex-direction:column; }
-    .project .thumb { aspect-ratio: 16/9; overflow:hidden; }
-    .project .thumb img { width:100%; height:100%; object-fit:cover; transition: transform .6s ease; }
-    .project:hover .thumb img { transform: scale(1.06); }
-    .project .body { padding:14px 14px 16px; display:grid; gap:8px; }
-    .tags { display:flex; gap:8px; flex-wrap:wrap; }
-    .tag { font-size:12px; padding:6px 8px; border-radius:999px; background: rgba(124,58,237,.15); color:#e9d5ff; }
-    .tag.blue { background: rgba(34,211,238,.15); color:#cffafe; }
-    .tag.green { background: rgba(16,185,129,.15); color:#d1fae5; }
-    .actions { display:flex; gap:10px; margin-top:6px; }
-    .btn.small { padding:8px 10px; font-weight:700; border-radius:10px; font-size:13px; }
-    .ghost.small { border-color: rgba(148,163,184,.3); }
-
-    /* Modal */
-    .modal { position: fixed; inset:0; display:none; align-items:center; justify-content:center; background: rgba(2,8,23,.7); padding:20px; z-index:100; }
-    .modal.open { display:flex; }
-    .modal .content { width:min(980px, 96%); background: var(--panel); border:1px solid rgba(148,163,184,.2); border-radius:16px; padding:14px; box-shadow: var(--shadow); }
-    .modal .bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
-    .modal .close { background:transparent; border:0; color:var(--text); font-size:22px; cursor:pointer; }
-    .modal video { width:100%; border-radius:12px; outline:none; }
+    /* Testimonials */
+    .quotes{ display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+    .quote{ padding:18px; border-radius:16px; border:1px solid var(--line); background: #fafcff; }
 
     /* Contact */
-    .contact { display:grid; grid-template-columns: 1fr 1fr; gap:20px; }
-    .contact a.link { color: var(--brand-2); font-weight:700; }
-    .contact .card { display:grid; gap:10px; }
+    .contact{ display:grid; grid-template-columns: 1fr 1fr; gap:18px; }
+    .contact a.link{ color: var(--brand); font-weight:700; display:inline-flex; align-items:center; gap:8px; }
 
-    footer { padding:32px 0 48px; color:var(--muted); text-align:center; }
+    footer{ padding: 32px 0 48px; color: var(--muted); text-align:center; }
+
+    /* Modal */
+    .modal{ position: fixed; inset:0; display:none; align-items:center; justify-content:center; background: rgba(2,8,23,.55); padding:20px; z-index:100; }
+    .modal.open{ display:flex; }
+    .modal .content{ width:min(980px,96%); background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:14px; box-shadow: var(--shadow); }
+    .modal .bar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+    .modal .close{ background:transparent; border:0; color:var(--text); font-size:22px; cursor:pointer; }
 
     /* Floating WhatsApp Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: white;
-      border-radius: 50px;
-      padding: 12px 20px;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      animation: pulse 2s infinite;
-    }
-    .whatsapp-float:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); }
-      50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6); }
-      100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); }
-    }
+    .whatsapp-float{ position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 50px; padding: 12px 20px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 700; transition: all .3s ease; }
+    .whatsapp-float:hover{ transform: translateY(-2px); box-shadow: 0 6px 25px rgba(37, 211, 102, .4); }
 
     /* Responsive */
-    @media (max-width: 900px){ 
-      .hero{ grid-template-columns: 1fr; } 
-      .t{ grid-template-columns: 1fr; } 
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
       .contact{ grid-template-columns: 1fr; }
-      .whatsapp-float { bottom: 15px; right: 15px; padding: 10px 16px; font-size: 14px; }
     }
+
+    /* Pricing */
+    .pricing{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+    .plan{ border: 1px solid var(--line); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow); padding: 18px; display:grid; gap:12px; }
+    .price{ font-size:28px; font-weight:800; }
+    .badge{ display:inline-block; font-size:12px; padding:6px 8px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:white; border-radius:999px; font-weight:700; }
+    .plan ul{ margin:0; padding-left:18px; }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container nav">
-      <div class="brand"><span class="dot" aria-hidden="true"></span> <span>Maria <strong>Zahid</strong></span></div>
+      <div class="brand">
+        <img src="codirian-logo.png" alt="Codirian Solutions logo" class="logo-img" />
+        <span>Codirian <strong>Solutions</strong></span>
+      </div>
       <nav aria-label="Primary">
         <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#pricing">Pricing</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/codirian-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
       </nav>
       <div class="right">
-        <button id="theme" class="btn ghost" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
-        <a class="btn" href="#projects"><i class="fa-solid fa-diagram-project"></i> <span>View Work</span></a>
+        <a class="btn ghost" href="#contact"><i class="fa-regular fa-paper-plane"></i> Get Quote</a>
+        <a class="btn" href="#solutions"><i class="fa-solid fa-rocket"></i> View Work</a>
       </div>
     </div>
   </header>
@@ -178,297 +159,307 @@
     <!-- Hero -->
     <section class="hero container" id="home">
       <div>
-        <h1>Senior Full‑Stack .NET Developer <span class="muted">| Remote Specialist</span></h1>
-        <p>
-          I design, build, and scale enterprise web apps using <strong>ASP.NET Core</strong>, <strong>Angular</strong>, and <strong>SQL Server</strong> — with data experiences in <strong>Power BI</strong>.
-          Proven delivery across education, healthcare, ERP, hospitality, and e‑commerce.
-        </p>
+        <h1>We build reliable software that grows your business</h1>
+        <p>Codirian Solutions delivers product-grade <strong>.NET</strong>, <strong>MERN</strong>, <strong>Mobile</strong>, and <strong>AI</strong> applications—with secure APIs, dashboards, and automation. Clear scope, weekly demos, on-time launches.</p>
         <div class="hero-cta">
-          <a class="btn" href="#projects"><i class="fa-solid fa-rocket"></i> Explore Projects</a>
-          <a class="btn" href="https://wa.me/923428511599?text=Hi%20Maria,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" style="background: linear-gradient(135deg, #25D366, #128C7E);"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</a>
+          <a class="btn" href="#contact"><i class="fa-solid fa-headset"></i> Book a Free Consult</a>
+          <a class="btn ghost" href="#case-studies"><i class="fa-regular fa-folder-open"></i> See Results</a>
         </div>
-        <div class="hero-card" role="note" aria-label="Key highlight">
-          <i class="fa-solid fa-circle-check"></i>
-          <div>
-            <strong>Remote delivery, global clients.</strong> Comfortable across UTC+5 to UTC−8, async and Agile.
+        <div class="trust">
+          <div class="chip"><i class="fa-solid fa-shield-halved"></i> NDA & IP Transfer</div>
+          <div class="chip"><i class="fa-solid fa-circle-check"></i> Fixed Scope & Milestones</div>
+          <div class="chip"><i class="fa-solid fa-gauge-high"></i> Performance & Security</div>
+          <div class="chip"><i class="fa-solid fa-bolt"></i> Fast Response (UTC+5)</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Core Capabilities</h3>
+        <div class="grid-3">
+          <div class="service"><i class="fa-solid fa-code"></i> <strong>Web Apps</strong><div class="muted">.NET 6+, ASP.NET Core, Angular/React</div></div>
+          <div class="service"><i class="fa-solid fa-mobile-screen"></i> <strong>Mobile Apps</strong><div class="muted">Flutter & React Native</div></div>
+          <div class="service"><i class="fa-solid fa-database"></i> <strong>Data & BI</strong><div class="muted">SQL Server, Power BI, DAX</div></div>
+          <div class="service"><i class="fa-solid fa-brain"></i> <strong>AI & GenAI</strong><div class="muted">LLM apps, RAG chatbots, embeddings</div></div>
+          <div class="service"><i class="fa-solid fa-shop"></i> <strong>E-commerce</strong><div class="muted">MERN, WooCommerce, payments</div></div>
+          <div class="service"><i class="fa-solid fa-cloud-arrow-up"></i> <strong>DevOps</strong><div class="muted">Azure, CI/CD, Docker</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services (expanded with latest in-demand offerings) -->
+    <section class="container" id="services">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p class="muted">Modern stacks, measurable outcomes.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card"><h3><i class="fa-solid fa-bolt"></i> Generative AI & LLM Apps</h3><p class="muted">Chatbots, copilots, document Q&A, content automation using OpenAI/Azure/Open-source LLMs.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-magnifying-glass"></i> RAG & Vector Search</h3><p class="muted">Retrieval-Augmented Generation with embeddings, semantic search (Pinecone, Qdrant, Azure AI Search).</p></div>
+        <div class="card"><h3><i class="fa-solid fa-gears"></i> AI Integration & Orchestration</h3><p class="muted">Tools, function calling, guardrails, evals, and observability for production AI.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-diagram-project"></i> .NET Modernization</h3><p class="muted">ASP.NET Core, microservices, EF Core, clean architecture, performance tuning.</p></div>
+
+        <div class="card"><h3><i class="fa-brands fa-react"></i> MERN / Next.js</h3><p class="muted">MongoDB, Express, React/Next.js, Node with SSR/ISR, JWT/SSO, Stripe, and admin dashboards.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-mobile"></i> Mobile Engineering</h3><p class="muted">Flutter & React Native apps with push, maps, offline sync, and app-store releases.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-database"></i> Data Engineering</h3><p class="muted">SQL Server, ETL/ELT, warehousing, Power BI, KPI dashboards, and governance.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-shield-halved"></i> Security & Compliance</h3><p class="muted">AuthN/Z, RBAC, OWASP, API hardening, secrets management, and audits.</p></div>
+
+        <div class="card"><h3><i class="fa-solid fa-flask"></i> QA & Test Automation</h3><p class="muted">Unit, integration, E2E (Playwright/Cypress), load tests, CI quality gates.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-palette"></i> UI/UX & Design Systems</h3><p class="muted">Design libraries, accessibility (WCAG), motion, and component kits.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-cloud"></i> Cloud & DevOps</h3><p class="muted">Azure infra, Docker, Kubernetes, GitHub Actions/Azure DevOps, monitoring & alerts.</p></div>
+        <div class="card"><h3><i class="fa-solid fa-handshake"></i> Staff Augmentation</h3><p class="muted">Dedicated developers & pods aligned to your roadmap, sprint cadence, and tools.</p></div>
+      </div>
+    </section>
+
+    <!-- Solutions / Projects -->
+    <section class="container" id="solutions">
+      <div class="section-head">
+        <h2>Solutions</h2>
+        <div class="filters" role="tablist" aria-label="Solution filters">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="dotnet" role="tab">.NET</button>
+          <button class="filter" data-filter="mern" role="tab">MERN</button>
+          <button class="filter" data-filter="mobile" role="tab">Mobile</button>
+          <button class="filter" data-filter="ai" role="tab">AI</button>
+          <button class="filter" data-filter="bi" role="tab">Power BI</button>
+          <button class="filter" data-filter="wp" role="tab">WordPress</button>
+        </div>
+      </div>
+
+      <div class="projects" id="grid">
+        <!-- Core (7) -->
+        <article class="project" data-filter="dotnet">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1320&auto=format&fit=crop" alt=".NET ERP analytics screen" /></div>
+          <div class="body">
+            <h3>Enterprise ERP Platform</h3>
+            <p class="muted">HR, Finance, Inventory, Procurement with role-based access and real-time reporting.</p>
+            <div class="tags"><span class="tag">.NET 6</span><span class="tag t">EF Core</span><span class="tag p">Angular</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="erp"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
           </div>
+        </article>
+
+        <article class="project" data-filter="bi">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=1320&auto=format&fit=crop" alt="Education analytics BI" /></div>
+          <div class="body">
+            <h3>Educational Insights BI</h3>
+            <p class="muted">KPI dashboards for attendance and performance with secure row-level access.</p>
+            <div class="tags"><span class="tag">Power BI</span><span class="tag t">DAX</span><span class="tag p">.NET API</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="edu-bi"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="mern">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1320&auto=format&fit=crop" alt="MERN e-commerce storefront" /></div>
+          <div class="body">
+            <h3>ShopMate — MERN E-commerce</h3>
+            <p class="muted">Catalog, cart, checkout, admin dashboard, JWT auth, and Stripe integration.</p>
+            <div class="tags"><span class="tag">MongoDB</span><span class="tag t">Express</span><span class="tag p">React</span><span class="tag">Node.js</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="shopmate"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="mern">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=1320&auto=format&fit=crop" alt="Kanban productivity app" /></div>
+          <div class="body">
+            <h3>TaskFlow — Kanban for Teams</h3>
+            <p class="muted">Drag-and-drop boards, roles, activity logs, and real-time updates via Socket.IO.</p>
+            <div class="tags"><span class="tag">MongoDB</span><span class="tag t">Express</span><span class="tag p">React</span><span class="tag">Node.js</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="taskflow"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="mobile">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1320&auto=format&fit=crop" alt="Food delivery mobile app" /></div>
+          <div class="body">
+            <h3>FoodieGo — React Native</h3>
+            <p class="muted">Customer & rider apps with live tracking, push notifications, and Stripe payments.</p>
+            <div class="tags"><span class="tag">React Native</span><span class="tag t">Expo</span><span class="tag p">Node.js API</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="foodiego"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="mobile">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1320&auto=format&fit=crop" alt="Wellness mobile app" /></div>
+          <div class="body">
+            <h3>HealthTrack — Flutter</h3>
+            <p class="muted">Wearables sync, goals, reminders, and charts with Firebase Auth & Firestore.</p>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag t">Firebase</span><span class="tag p">Charts</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="healthtrack"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="wp">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1515165562835-c3b8c1a4996b?q=80&w=1320&auto=format&fit=crop" alt="WooCommerce storefront" /></div>
+          <div class="body">
+            <h3>WooCommerce Storefront</h3>
+            <p class="muted">Custom theme, payment gateways, inventory automation; SEO optimized.</p>
+            <div class="tags"><span class="tag">WordPress</span><span class="tag t">WooCommerce</span><span class="tag p">PHP/MySQL</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="wp"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <!-- NEW +5 Projects (from your ask) -->
+        <article class="project" data-filter="dotnet">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=1320&auto=format&fit=crop" alt="Hospital information system" /></div>
+          <div class="body">
+            <h3>ClinicX — HIS (.NET)</h3>
+            <p class="muted">OPD/IPD, pharmacy, lab results, billing; HL7-ready APIs and Crystal Reports.</p>
+            <div class="tags"><span class="tag">ASP.NET Core</span><span class="tag t">SQL Server</span><span class="tag p">Angular</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="clinicx"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="mern">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1320&auto=format&fit=crop" alt="Fleet tracking maps" /></div>
+          <div class="body">
+            <h3>FleetTrack — Telematics</h3>
+            <p class="muted">Live GPS, geofencing, driver scoring, and maintenance reminders with MQTT.</p>
+            <div class="tags"><span class="tag">MongoDB</span><span class="tag t">Express</span><span class="tag p">React</span><span class="tag">Node</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="fleettrack"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="dotnet">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1517976487492-576ea34b43b6?q=80&w=1320&auto=format&fit=crop" alt="Learning management system" /></div>
+          <div class="body">
+            <h3>SmartLMS — Learning</h3>
+            <p class="muted">Courses, quizzes, grading, and SSO for schools and corporate training.</p>
+            <div class="tags"><span class="tag">.NET 6</span><span class="tag t">Blazor</span><span class="tag p">Azure</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="smartlms"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="dotnet">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd7e?q=80&w=1320&auto=format&fit=crop" alt="Secure document management" /></div>
+          <div class="body">
+            <h3>DocGuard — Secure DMS</h3>
+            <p class="muted">Encryption, RBAC, audit trails, retention policies; S3/Azure Blob connectors.</p>
+            <div class="tags"><span class="tag">.NET Core</span><span class="tag t">EF Core</span><span class="tag p">Web API</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="docguard"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="ai">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1320&auto=format&fit=crop" alt="AI document chatbot" /></div>
+          <div class="body">
+            <h3>InsightBot — RAG Chat for Docs</h3>
+            <p class="muted">Chat over PDFs/knowledge base with embeddings, citations, and access control.</p>
+            <div class="tags"><span class="tag">LLM</span><span class="tag t">RAG</span><span class="tag p">Vector DB</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="insightbot"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-filter="ai">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1320&auto=format&fit=crop" alt="AI analytics copilot" /></div>
+          <div class="body">
+            <h3>BI Copilot — Natural Language Analytics</h3>
+            <p class="muted">Ask questions in plain English and generate Power BI insights with guardrails.</p>
+            <div class="tags"><span class="tag">OpenAI</span><span class="tag t">Power BI</span><span class="tag p">DAX</span></div>
+            <div class="actions"><a class="btn" href="#" data-case="bicopilot"><i class="fa-solid fa-file-lines"></i> Case Study</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="container" id="case-studies">
+      <div class="section-head">
+        <h2>Case Studies</h2>
+        <p class="muted">Selected work and measurable outcomes.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>ERP Modernization</h3>
+          <p class="muted">Consolidated HR/Finance/Inventory into a modular .NET platform. Reduced manual processes by 45%.</p>
+          <a class="btn" href="#" data-case="erp"><i class="fa-solid fa-file-lines"></i> Read</a>
+        </div>
+        <div class="card">
+          <h3>Education BI</h3>
+          <p class="muted">Power BI rollout with row-level security for 100+ campuses. Cut reporting time by 70%.</p>
+          <a class="btn" href="#" data-case="edu-bi"><i class="fa-solid fa-file-lines"></i> Read</a>
+        </div>
+        <div class="card">
+          <h3>Mobile Commerce</h3>
+          <p class="muted">React Native + Node backend. Conversion up 22% with push campaigns & one-tap checkout.</p>
+          <a class="btn" href="#" data-case="foodiego"><i class="fa-solid fa-file-lines"></i> Read</a>
         </div>
       </div>
-      <div class="card" aria-label="Tech summary">
-        <h3 style="margin:0 0 8px">Core Stack</h3>
-        <div class="skills">
-          <div class="chip"><i class="fa-brands fa-microsoft"></i> .NET 6+ / C#</div>
-          <div class="chip"><i class="fa-brands fa-angular"></i> Angular 12+</div>
-          <div class="chip"><i class="fa-solid fa-database"></i> SQL Server, EF Core</div>
-          <div class="chip"><i class="fa-solid fa-diagram-project"></i> Microservices, Web API</div>
-          <div class="chip"><i class="fa-solid fa-chart-pie"></i> Power BI, DAX</div>
-          <div class="chip"><i class="fa-brands fa-wordpress"></i> WordPress / WooCommerce</div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="container" id="pricing">
+      <div class="section-head">
+        <h2>Pricing</h2>
+        <p class="muted">Transparent packages. Fixed scope. No surprises.</p>
+      </div>
+      <div class="pricing">
+        <div class="plan">
+          <div class="badge">Starter</div>
+          <div class="price">PKR 180,000</div>
+          <p class="muted">2–3 week MVP for validation and stakeholder demos.</p>
+          <ul>
+            <li>1 feature module (web / mobile / AI POC)</li>
+            <li>Basic admin & auth</li>
+            <li>API + database setup</li>
+            <li>Analytics essentials</li>
+          </ul>
+          <a class="btn" href="#contact"><i class="fa-solid fa-bolt"></i> Get Starter</a>
+        </div>
+
+        <div class="plan" style="border-width:2px">
+          <div class="badge">Growth</div>
+          <div class="price">PKR 420,000</div>
+          <p class="muted">Production-ready build for launch and early customers.</p>
+          <ul>
+            <li>3–5 feature modules</li>
+            <li>RBAC, SSO/JWT</li>
+            <li>CI/CD + staging</li>
+            <li>Dashboards & reports</li>
+          </ul>
+          <a class="btn" href="#contact"><i class="fa-solid fa-rocket"></i> Choose Growth</a>
+        </div>
+
+        <div class="plan">
+          <div class="badge">Scale</div>
+          <div class="price">Custom</div>
+          <p class="muted">For complex systems, AI copilots, or ongoing product teams.</p>
+          <ul>
+            <li>Custom scope & timeline</li>
+            <li>Advanced security & guardrails</li>
+            <li>Performance SLA</li>
+            <li>Dedicated team & support</li>
+          </ul>
+          <a class="btn" href="#contact"><i class="fa-solid fa-handshake"></i> Talk to Us</a>
         </div>
       </div>
+      <p class="muted" style="margin-top:10px">*Final pricing depends on scope. Fixed bids available after a short discovery call.</p>
     </section>
 
     <!-- About -->
     <section class="container" id="about">
       <div class="section-head">
-        <h2>About Me</h2>
-        <p class="muted">Lahore, Pakistan · Available for full‑time remote</p>
+        <h2>About Codirian</h2>
+        <p class="muted">Remote-first team based in Lahore (UTC+5)</p>
       </div>
       <div class="card">
-        <p>
-          I turn complex business needs into fast, reliable software. From concept to deployment, I own the SDLC and collaborate closely with stakeholders to ship secure, maintainable systems.
-          I care about clean architecture, performance, and measurable outcomes.
-        </p>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="container" id="experience">
-      <div class="section-head">
-        <h2>Experience</h2>
-        <p class="muted">4+ years professional · 100% remote success rate</p>
-      </div>
-      <div class="timeline">
-        <div class="t">
-          <div class="date">2025 — Present</div>
-          <div class="card">
-            <h3 style="margin:0">Senior .NET Developer (Freelance)</h3>
-            <p class="muted" style="margin:.2rem 0 .6rem">Independent Contractor · Global Remote</p>
-            <ul style="margin:0 0 0 1rem; padding:0; line-height:1.5">
-              <li>Delivered 5+ custom solutions with .NET 6+, Angular 15+, SQL Server (99.9% uptime)</li>
-              <li>End‑to‑end SDLC ownership · CI/CD · code reviews · on‑time delivery</li>
-              <li>Built WordPress e‑commerce with custom themes and payment gateways</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t">
-          <div class="date">2023 — 2024</div>
-          <div class="card">
-            <h3 style="margin:0">Full‑Stack Developer / Backend Developer</h3>
-            <p class="muted" style="margin:.2rem 0 .6rem">The City Schools Head Office · Lahore</p>
-            <ul style="margin:0 0 0 1rem; padding:0; line-height:1.5">
-              <li>Web apps for 10k+ students; reduced page load by 40%</li>
-              <li>Power BI dashboards for performance analytics; role‑based security</li>
-              <li>Agile collaboration across product, data, and infra teams</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t">
-          <div class="date">2021 — 2023</div>
-          <div class="card">
-            <h3 style="margin:0">Software Engineer</h3>
-            <p class="muted" style="margin:.2rem 0 .6rem">CNS Engineering · Lahore</p>
-            <ul style="margin:0 0 0 1rem; padding:0; line-height:1.5">
-              <li>Enterprise ERP for 50+ clients using Angular & .NET Core</li>
-              <li>Led Med360 HIS; improved operational efficiency by 35%</li>
-              <li>Optimized SQL (1M+ records) and reporting</li>
-            </ul>
-          </div>
+        <p>We are a compact, senior team focused on delivering business outcomes—not just code. Expect clear communication, transparent milestones, and a pragmatic approach that keeps your users and ROI at the center.</p>
+        <div class="grid-3" style="margin-top:10px">
+          <div><strong>Stacks</strong><div class="muted">.NET, MERN, Flutter, React Native, SQL Server, Power BI, LLMs</div></div>
+          <div><strong>Practices</strong><div class="muted">Clean architecture, CI/CD, code reviews, monitoring</div></div>
+          <div><strong>Industries</strong><div class="muted">Education, Healthcare, Hospitality, Retail, ERP</div></div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section class="container" id="projects">
+    <!-- Testimonials -->
+    <section class="container" id="testimonials">
       <div class="section-head">
-        <h2>Projects</h2>
-        <div class="filters" role="tablist" aria-label="Project filters">
-          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="filter" data-filter="dotnet" role="tab">.NET</button>
-          <button class="filter" data-filter="angular" role="tab">Angular</button>
-          <button class="filter" data-filter="powerbi" role="tab">Power BI</button>
-          <button class="filter" data-filter="wordpress" role="tab">WordPress</button>
-        </div>
+        <h2>What Clients Say</h2>
+        <p class="muted">Outcomes you can measure.</p>
       </div>
-
-      <div class="grid" id="grid">
-        <!-- 1 Med360 -->
-        <article class="project" data-tags="dotnet,healthcare" data-filter="dotnet">
-          <div class="thumb">
-            <img src="design_1.png" alt="Med360 Hospital Information System dashboard" />
-          </div>
-          <div class="body">
-            <h3>Med360 — Hospital Information System</h3>
-            <p class="muted">OPD/IPD, pharmacy, lab, and billing with Crystal Reports. Streamlined ops and reduced admin workload by 50%.</p>
-            <div class="tags">
-              <span class="tag">ASP.NET MVC</span><span class="tag blue">SQL Server</span><span class="tag green">jQuery</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 2 Educational Insights (Power BI) -->
-        <article class="project" data-tags="powerbi,education" data-filter="powerbi">
-          <div class="thumb">
-            <img src="design_3.png" alt="Power BI dashboard for education analytics" />
-          </div>
-          <div class="body">
-            <h3>Educational Insights Dashboard</h3>
-            <p class="muted">Interactive KPIs on attendance, performance, and resources; row‑level security. 70% less manual reporting.</p>
-            <div class="tags">
-              <span class="tag">Power BI</span><span class="tag blue">DAX</span><span class="tag green">.NET API</span>
-            </div>
-            <div class="actions">
-              <button class="btn small ghost" data-gallery="powerbi"><i class="fa-regular fa-images"></i> Gallery</button>
-              <button class="btn small ghost" data-video="powerbi"><i class="fa-solid fa-circle-play"></i> Demo Video</button>
-              <a class="btn small" href="#" aria-label="Case study" data-case="edu-bi"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3 SmartSchool ERP -->
-        <article class="project" data-tags="dotnet,education" data-filter="dotnet angular">
-          <div class="thumb">
-            <img src="design_5.png" alt="SmartSchool ERP interface" />
-          </div>
-          <div class="body">
-            <h3>SmartSchool ERP</h3>
-            <p class="muted">Multi‑campus education management: admissions, academics, and finance with real‑time dashboards.</p>
-            <div class="tags">
-              <span class="tag">.NET 6</span><span class="tag blue">Blazor</span><span class="tag green">Azure</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4 Enterprise ERP -->
-        <article class="project" data-tags="dotnet,erp" data-filter="dotnet angular">
-          <div class="thumb">
-            <img src="A_presentation_image_showcases_an_Enterprise_Web_A.jpg" alt="Enterprise ERP analytics screen" />
-          </div>
-          <div class="body">
-            <h3>Enterprise ERP Platform</h3>
-            <p class="muted">Modular HR, Finance, Inventory, Procurement. Role‑based access and real‑time reporting.</p>
-            <div class="tags">
-              <span class="tag">Angular 12+</span><span class="tag blue">.NET 6</span><span class="tag green">EF Core</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5 AIMS -->
-        <article class="project" data-tags="dotnet,education" data-filter="dotnet">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1320&auto=format&fit=crop" alt="AIMS school management UI" />
-          </div>
-          <div class="body">
-            <h3>AIMS — Schools Management</h3>
-            <p class="muted">Automated registration, attendance, results, and fees across multiple campuses.</p>
-            <div class="tags">
-              <span class="tag">C#</span><span class="tag blue">Web API</span><span class="tag green">SQL Server</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 6 File Management -->
-        <article class="project" data-tags="dotnet" data-filter="dotnet">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1320&auto=format&fit=crop" alt="Secure file management interface" />
-          </div>
-          <div class="body">
-            <h3>Secure File Management System</h3>
-            <p class="muted">Uploads/downloads with encryption, role‑based access, and full audit trails.</p>
-            <div class="tags">
-              <span class="tag">.NET Core</span><span class="tag blue">EF Core</span><span class="tag green">jQuery</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 7 Hotel Management -->
-        <article class="project" data-tags="dotnet,hospitality" data-filter="dotnet">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1320&auto=format&fit=crop" alt="Hotel management booking dashboard" />
-          </div>
-          <div class="body">
-            <h3>Hotel Management Suite</h3>
-            <p class="muted">Reservations, billing, availability tracking, and reporting for multi‑location hotels.</p>
-            <div class="tags">
-              <span class="tag">ASP.NET MVC</span><span class="tag blue">Bootstrap</span><span class="tag green">SQL Server</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 8 E‑commerce WordPress -->
-        <article class="project" data-tags="wordpress,ecommerce" data-filter="wordpress">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1515165562835-c3b8c1a4996b?q=80&w=1320&auto=format&fit=crop" alt="WordPress WooCommerce storefront" />
-          </div>
-          <div class="body">
-            <h3>WooCommerce Storefront</h3>
-            <p class="muted">Custom theme, payment gateway integration, inventory and order automation; SEO optimized.</p>
-            <div class="tags">
-              <span class="tag">WordPress</span><span class="tag blue">WooCommerce</span><span class="tag green">PHP/MySQL</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 9 Buying/Sale Inventory -->
-        <article class="project" data-tags="dotnet,inventory" data-filter="dotnet angular">
-          <div class="thumb">
-            <img src="BuySell ER Diagram.png" alt="Inventory management with barcode scanning" />
-          </div>
-          <div class="body">
-            <h3>Buying & Sales Inventory</h3>
-            <p class="muted">POs, sales, stock monitoring, barcode scanning, and automated reports.</p>
-            <div class="tags">
-              <span class="tag">.NET Core</span><span class="tag blue">Angular</span><span class="tag green">REST API</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 10 Inventory Pro (AI) -->
-        <article class="project" data-tags="dotnet,ai" data-filter="dotnet">
-          <div class="thumb">
-            <img src="aspnet_csharp_bug_fix_gig_image.png" alt="AI‑powered inventory optimization charts" />
-          </div>
-          <div class="body">
-            <h3>Inventory Pro — Predictive Reordering</h3>
-            <p class="muted">Forecasting & reorder suggestions powered by ML.NET to cut stock‑outs and overstock.</p>
-            <div class="tags">
-              <span class="tag">C#</span><span class="tag blue">ML.NET</span><span class="tag green">React</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 11 CI/CD Automation Toolkit -->
-        <article class="project" data-tags="devops" data-filter="dotnet">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1320&auto=format&fit=crop" alt="CI/CD pipelines visualization" />
-          </div>
-          <div class="body">
-            <h3>CI/CD Automation Toolkit</h3>
-            <p class="muted">Reusable pipelines, blue‑green deployments; cut release time by ~65% across client projects.</p>
-            <div class="tags">
-              <span class="tag">Azure DevOps</span><span class="tag blue">GitHub Actions</span><span class="tag green">Docker</span>
-            </div>
-            <div class="actions">
-              <a class="btn small" href="#" aria-label="Case study" data-case="med360"><i class="fa-solid fa-file-lines"></i> Case Study</a>
-            </div>
-          </div>
-        </article>
+      <div class="quotes">
+        <div class="quote"><strong>“Professional and predictable”</strong><br><span class="muted">Weekly demos kept everyone aligned. We shipped on time and under budget.</span></div>
+        <div class="quote"><strong>“Performance gains overnight”</strong><br><span class="muted">They halved our load times and gave us dashboards we actually use.</span></div>
+        <div class="quote"><strong>“Great partner for growth”</strong><br><span class="muted">Clear scope, no surprises. We expanded the app twice with zero downtime.</span></div>
       </div>
     </section>
 
@@ -476,46 +467,47 @@
     <section class="container" id="contact">
       <div class="section-head">
         <h2>Contact</h2>
-        <p class="muted">Let’s build something reliable and scalable.</p>
+        <p class="muted">Tell us about your project—get a plan and quote.</p>
       </div>
       <div class="contact">
         <div class="card">
-          <h3 style="margin:0 0 8px">Reach me</h3>
+          <h3 style="margin:0 0 8px">Reach Us</h3>
           <div><i class="fa-solid fa-envelope"></i> <a class="link" href="mailto:zahidmaria786@gmail.com">zahidmaria786@gmail.com</a></div>
           <div><i class="fa-solid fa-phone"></i> <a class="link" href="tel:+923428511599">+92 342 8511599</a></div>
-          <div><i class="fa-brands fa-whatsapp"></i> <a class="link" href="https://wa.me/923428511599?text=Hi%20Maria,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank">WhatsApp Chat</a></div>
+          <div><i class="fa-brands fa-whatsapp"></i> <a class="link" target="_blank" href="https://wa.me/923428511599?text=Hi%20Codirian%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project.">WhatsApp Chat</a></div>
           <div><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan (UTC+5)</div>
         </div>
         <div class="card">
-          <h3 style="margin:0 0 8px">Social</h3>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn small ghost" href="https://linkedin.com/in/maria-zahid-dev" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a class="btn small ghost" href="https://github.com/mariazahid" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a class="btn small ghost" href="https://twitter.com/mariazahid_dev" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i> X</a>
-            <a class="btn small ghost" href="https://stackoverflow.com/users/maria-zahid" target="_blank" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i> Stack Overflow</a>
-          </div>
+          <h3 style="margin:0 0 8px">Start a Project</h3>
+          <p class="muted" style="margin:0 0 10px">We’ll reply with a short plan, timeline, and quote.</p>
+          <form onsubmit="event.preventDefault(); alert('Thanks! We will get back to you shortly.');">
+            <div style="display:grid; gap:10px;">
+              <input required placeholder="Your name" style="padding:12px; border-radius:10px; border:1px solid var(--line)" />
+              <input type="email" required placeholder="Email" style="padding:12px; border-radius:10px; border:1px solid var(--line)" />
+              <input placeholder="Company (optional)" style="padding:12px; border-radius:10px; border:1px solid var(--line)" />
+              <textarea rows="4" required placeholder="What do you want to build?" style="padding:12px; border-radius:10px; border:1px solid var(--line)"></textarea>
+              <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
-      © <span id="year"></span> Maria Zahid. All rights reserved.
+      © <span id="year"></span> Codirian Solutions. All rights reserved.
     </div>
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/923428511599?text=Hi%20Maria,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" class="whatsapp-float" aria-label="Contact via WhatsApp">
+  <a href="https://wa.me/923428511599?text=Hi%20Codirian%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="whatsapp-float" aria-label="Contact via WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
     <span>Chat Now</span>
   </a>
 
-  <!-- Video Modal removed - no demo videos available -->
-
-  <!-- Gallery Modal removed -->
-
-  <!-- Case Study Modal (re-uses same container for content) -->
+  <!-- Case Study Modal -->
   <div class="modal" id="caseModal" aria-hidden="true" role="dialog" aria-label="Project case study">
     <div class="content">
       <div class="bar">
@@ -527,13 +519,7 @@
   </div>
 
   <script>
-    // Theme toggle with persistence
-    const root = document.documentElement; const themeBtn = document.getElementById('theme');
-    const apply = t => root.classList.toggle('light', t === 'light');
-    apply(localStorage.getItem('theme')||'');
-    themeBtn.addEventListener('click', () => { const t = root.classList.contains('light') ? '' : 'light'; localStorage.setItem('theme', t ? 'light' : ''); apply(localStorage.getItem('theme')); });
-
-    // Set year
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Filters
@@ -547,130 +533,114 @@
       });
     }));
 
-    // Video modal removed - no demo videos available
-
-    // Gallery functionality removed
-
-    // Case study modal content
-    const cases={
-      'med360':{
-        title:'Med360 — Hospital Information System',
-        points:[
-          'Modules: OPD, IPD, Pharmacy, Lab, Billing, Crystal Reports',
-          '99.9% uptime; reduced admin workload by 50% through automation',
-          'Tech: ASP.NET MVC, SQL Server, jQuery'
-        ]
-      },
-      'edu-bi':{
-        title:'Educational Insights (Power BI)',
-        points:[
-          'Integrated multiple school systems; RLS for secure access',
-          'Cut manual reporting by ~70%',
-          'Tech: Power BI, DAX, .NET Core API, SQL Server'
-        ]
-      },
-      'smartschool':{
-        title:'SmartSchool ERP',
-        points:[
-          'Admissions, academics, finance; multi‑campus rollout',
-          'Azure hosting with monitoring; role‑based dashboards',
-          'Tech: .NET 6, Blazor, Azure'
-        ]
-      },
-      'erp':{
-        title:'Enterprise ERP Platform',
-        points:[
-          'HR, Finance, Inventory, Procurement modules',
-          'RBAC + real‑time reporting',
-          'Tech: Angular 12+, .NET 6, EF Core'
-        ]
-      },
-      'aims':{
-        title:'AIMS — Schools Management',
-        points:[
-          'Automated registration, attendance, results, and fee workflows',
-          'Multi‑campus support with centralized reporting',
-          'Tech: C#, Web API, SQL Server'
-        ]
-      },
-      'files':{
-        title:'Secure File Management',
-        points:[
-          'Encryption, RBAC, audit trails; custom upload/download flows',
-          'Improved compliance and traceability',
-          'Tech: .NET Core, EF Core, jQuery'
-        ]
-      },
-      'hotel':{
-        title:'Hotel Management Suite',
-        points:[
-          'Reservations, billing, availability, and reports',
-          'Multi‑location support with centralized analytics',
-          'Tech: ASP.NET MVC, SQL Server, Bootstrap'
-        ]
-      },
-      'wp':{
-        title:'WooCommerce Storefront',
-        points:[
-          'Custom theme, payment gateways, inventory automation',
-          'SEO and mobile optimization',
-          'Tech: WordPress, WooCommerce, PHP/MySQL'
-        ]
-      },
-      'inv':{
-        title:'Buying & Sales Inventory',
-        points:[
-          'POs, sales, stock monitoring, barcode scanners, automated reports',
-          'Tech: .NET Core, Angular, REST API, SQL Server'
-        ]
-      },
-      'inv-pro':{
-        title:'Inventory Pro — Predictive',
-        points:[
-          'ML‑powered forecasting & reorder suggestions',
-          'Reduced stock‑outs and overstock with demand predictions',
-          'Tech: C#, ML.NET, React'
-        ]
-      },
-      'cicd':{
-        title:'CI/CD Automation Toolkit',
-        points:[
-          'Reusable pipelines and blue‑green deployments',
-          'Cut release times by ~65% across projects',
-          'Tech: Azure DevOps, GitHub Actions, Docker'
-        ]
-      }
+    // Case studies content
+    const cases = {
+      'erp':{ title:'Enterprise ERP Platform', points:[
+        'Modules: HR, Finance, Inventory, Procurement',
+        'Role-based access & real-time reporting',
+        'Stack: .NET 6, Angular, EF Core, SQL Server'
+      ]},
+      'edu-bi':{ title:'Educational Insights BI', points:[
+        'Attendance & performance KPIs across campuses',
+        'Row-level security and automated refresh',
+        'Stack: Power BI, DAX, .NET API, SQL Server'
+      ]},
+      'shopmate':{ title:'ShopMate — MERN E-commerce', points:[
+        'Admin dashboard for products, orders, customers',
+        'JWT Auth, Stripe, image CDN',
+        'Stack: MongoDB, Express, React, Node.js'
+      ]},
+      'taskflow':{ title:'TaskFlow — Kanban for Teams', points:[
+        'Drag-n-drop boards, roles, activity logs',
+        'Realtime updates with Socket.IO',
+        'Stack: MERN (MongoDB, Express, React, Node)'
+      ]},
+      'foodiego':{ title:'FoodieGo — React Native', points:[
+        'Customer & rider apps with live tracking',
+        'Push notifications & payments (Stripe)',
+        'Stack: React Native, Expo, Node.js API'
+      ]},
+      'healthtrack':{ title:'HealthTrack — Flutter', points:[
+        'Wearable sync, reminders, progress charts',
+        'Firebase Auth, Firestore, Storage',
+        'Stack: Flutter/Dart, Firebase'
+      ]},
+      'wp':{ title:'WooCommerce Storefront', points:[
+        'Custom theme & payment gateways',
+        'Inventory automation + SEO',
+        'Stack: WordPress, WooCommerce, PHP/MySQL'
+      ]},
+      'clinicx':{ title:'ClinicX — HIS (.NET)', points:[
+        'OPD/IPD, pharmacy, lab, billing',
+        'HL7-ready APIs and Crystal Reports',
+        'Stack: ASP.NET Core, SQL Server, Angular'
+      ]},
+      'fleettrack':{ title:'FleetTrack — Telematics', points:[
+        'Live GPS, geofencing, driver scoring',
+        'Maintenance reminders, MQTT ingestion',
+        'Stack: MERN, Map APIs, MQTT'
+      ]},
+      'smartlms':{ title:'SmartLMS — Learning', points:[
+        'Courses, quizzes, grading, SSO',
+        'Multi-tenant schools & corp training',
+        'Stack: .NET 6, Blazor, Azure'
+      ]},
+      'docguard':{ title:'DocGuard — Secure DMS', points:[
+        'Encryption, RBAC, audit trails',
+        'Retention policies, S3/Blob connectors',
+        'Stack: .NET Core, EF Core, Web API'
+      ]},
+      'insightbot':{ title:'InsightBot — RAG Chat for Docs', points:[
+        'Embeddings, vector search, citations',
+        'Access control & audit logs',
+        'Stack: LLM, RAG, Vector DB'
+      ]},
+      'bicopilot':{ title:'BI Copilot — Natural Language Analytics', points:[
+        'Ask questions and get Power BI insights',
+        'Hallucination guardrails & approvals',
+        'Stack: OpenAI, Power BI, DAX'
+      ]}
     };
 
+    // Modal
     const caseModal=document.getElementById('caseModal');
     const caseTitle=document.getElementById('caseTitle');
     const caseBody=document.getElementById('caseBody');
     document.querySelectorAll('[data-case]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        e.preventDefault(); const key=a.dataset.case; const c=cases[key]; if(!c) return;
-        caseTitle.textContent=c.title; caseBody.innerHTML = c.points.map(p=>`<div>• ${p}</div>`).join('');
+      a.addEventListener('click',(e)=>{
+        e.preventDefault();
+        const key=a.dataset.case; const c=cases[key]; if(!c) return;
+        caseTitle.textContent=c.title;
+        caseBody.innerHTML = c.points.map(p=>`<div>• ${p}</div>`).join('');
         caseModal.classList.add('open'); caseModal.setAttribute('aria-hidden','false');
       });
     });
-    caseModal.querySelector('.close').addEventListener('click',()=>{ caseModal.classList.remove('open'); caseModal.setAttribute('aria-hidden','true'); });
+    caseModal.querySelector('.close').addEventListener('click',()=>{
+      caseModal.classList.remove('open'); caseModal.setAttribute('aria-hidden','true');
+    });
     caseModal.addEventListener('click',e=>{ if(e.target===caseModal){ caseModal.classList.remove('open'); }});
 
-    // Smooth scroll enhancement
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{ const id=a.getAttribute('href'); const el=document.querySelector(id); if(el){ e.preventDefault(); window.scrollTo({top: el.offsetTop-20, behavior:'smooth'}); }});
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        const el=document.querySelector(id);
+        if(el){ e.preventDefault(); window.scrollTo({top: el.offsetTop-14, behavior:'smooth'}); }
+      });
     });
   </script>
 
   <!-- Structured data -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Maria Zahid",
-    "jobTitle": "Senior Full‑Stack .NET Developer",
-    "address": {"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},
-    "email": "mailto:zahidmaria786@gmail.com",
-    "url": "",
-    "sameAs":["https://linkedin.com/in/maria-zahid-dev","https://github.com/mariazahid","https://twitter.com/mariazahid_dev","https://stackoverflow.com/users/maria-zahid"],
-    "knowsAbout":["ASP.NET Core","Angular","SQL Server","Power BI","Microservices","WooCommerce"],
-    "worksFor": {"@type":"Organization","name":"Independent Contractor"}
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Codirian Solutions",
+    "url":"",
+    "email":"mailto:zahidmaria786@gmail.com",
+    "sameAs":["https://www.linkedin.com/company/codirian-solutions"],
+    "address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},
+    "knowsAbout":["ASP.NET Core",".NET 6","Angular","React","MongoDB","Node.js","Flutter","React Native","SQL Server","Power BI","DevOps","LLM","RAG","Vector Search"],
+    "brand":{"@type":"Brand","name":"Codirian"}
   }</script>
+</body>
+</html>
